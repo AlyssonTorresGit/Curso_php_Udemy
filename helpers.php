@@ -1,4 +1,15 @@
 <?php 
-echo ' arquivo de função';
+
+function saudacao()
+{
+    return 'Boa tarde';
+
+}
+function textoResumido(){
+    return 'texto resumido';
+
+}
+
+
 
 ?>
