@@ -1,5 +1,21 @@
 <?php 
 
+function contarTempo($data)
+{
+var_dump($data);
+}
+
+function formatarValor( $valor = null): string
+{
+return number_format(($valor?:10),2,',','.');
+
+}
+
+function formatarNumero($numero = null)
+{
+    return number_format($numero ? $numero:0,0,'.','.');
+}
+
 function saudacao():string
 {
     $hora = date('H');
