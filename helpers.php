@@ -1,4 +1,21 @@
 <?php 
+/**
+ * 
+ * 
+ */
+function validarURL(string $url): bool
+{
+if(mb_strlen($url) < 10){
+    return false;
+}
+if(!str_contains($url, '.')){
+    return false;
+}    
+if(str_contains($url, 'http://') or str_contains($url, 'https://')){
+    return true;
+}
+}
+
 
 function contarTempo($data)
 {
