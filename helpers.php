@@ -1,7 +1,7 @@
 <?php 
+
 /**
- * 
- * 
+ * validar email
  */
 function validarURL(string $url): bool
 {
@@ -16,6 +16,49 @@ if(str_contains($url, 'http://') or str_contains($url, 'https://')){
 }
 }
 
+function validarEmail(string $email): bool
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+/**
+ * contados de tempo em relação a data de criação.
+ * @param string $data
+ * @param  string
+ */
+function contadorTempo(string $data): string
+{
+    $agora = strtotime(date('Y-m-d H:i:s'));
+    $tempo = strtotime($data);
+    $diferenca = $agora - $tempo;
+
+    $segundos = $diferenca;
+    $minutos = round($diferenca / 60);
+    $horas = round($diferenca / 3600);
+    $dias = round($diferenca/ 86400);
+    $semanas = round($diferenca / 604800);
+    $meses = round($diferenca /2419200);
+    $anos = round($diferenca / 29030400);
+
+    if($segundos <= 60){
+        return 'agora';
+    }elseif ($minutos <= 60 ){
+        return $minutos == 1 ? 'há 1 minuto' : 'Há' . $minutos . 'minutos'; 
+    }elseif($horas <= 24){
+        return $horas == 1 ? 'Há 1 hora' : 'há' . $horas . 'horas';
+    }elseif($dias <= 7 ){
+        return $dias == 1 ? 'ontem' : 'há' . $dias . 'dias';
+    }elseif($semanas <= 4 ){
+        return $semanas == 1 ? 'há 1 semana' : 'há' . $semanas . 'meses';
+    }elseif($meses <= 12 ){
+        return $meses == 1 ? 'há 1 mês' : 'há' . $meses . 'meses';
+    }elseif($anos <= 1 ){
+        return $anos == 1 ? 'há 1 ano' : 'há' . $anos . 'meses';
+    }else{
+        return '';
+    }
+
+}
 
 function contarTempo($data)
 {
