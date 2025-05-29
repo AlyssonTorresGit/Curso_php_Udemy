@@ -1,4 +1,24 @@
 <?php 
+function url(string $url): string
+{
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+    $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUÇÃO);
+
+
+    
+    return $ambiente.$url;
+}
+
+function localhost(): bool
+{
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+if( $servidor == 'localhost')
+{
+    return true;
+}
+return false;
+}
+
 
 /**
  * validar email
