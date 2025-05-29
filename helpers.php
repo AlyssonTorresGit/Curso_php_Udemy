@@ -1,4 +1,30 @@
 <?php 
+
+function dataAtual()
+{
+$diaMes = date('d');
+$diaSemana = date('w');
+$Mes = date('n') - 1;
+$ano = date('Y');
+
+$nomeDiasDaSemana = ['domingo', 'segunda', 'terça' , 'q', 'q', 's', 's'];
+$nomesDosMeses = [
+    'jan',
+    'feve',
+    'mar',
+    'abr'
+];
+$dataFormatda = $nomeDiasDaSemana[$diaSemana];
+
+return $dataFormatda;
+
+}
+
+
+/**
+ * montar o url de acordo com o ambiente
+ */
+
 function url(string $url): string
 {
     $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
