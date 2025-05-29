@@ -3,4 +3,3 @@
 require 'sistema/configuracao.php';
 include 'helpers.php';
 
-echo dataAtual();

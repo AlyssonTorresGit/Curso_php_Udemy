@@ -126,19 +126,26 @@ function saudacao():string
 {
     $hora = date('H');
     
-    if($hora >= 0 && $hora < 6){
-        $saudacao = 'Boa madrugada';
-    }
-    elseif($hora >= 6 && $hora <=12){
-        $saudacao = 'bom dia';
-    }
-    elseif($hora >= 13 && $hora <=18){
-        $saudacao = 'Boa tarde';
+    // if($hora >= 0 && $hora < 6){
+    //     $saudacao = 'Boa madrugada';
+    // }
+    // elseif($hora >= 6 && $hora <=12){
+    //     $saudacao = 'bom dia';
+    // }
+    // elseif($hora >= 13 && $hora <=18){
+    //     $saudacao = 'Boa tarde';
 
-    }
-    else{
-        $saudacao = 'Boa noite';
-    }
+    // }
+    // else{
+    //     $saudacao = 'Boa noite';
+    // }
+$saudação = match(true){
+    $hora >= 0 and $hora <= 5  => 'Boa madrugada',
+    $hora >= 6 and $hora <= 11  => 'Bom dia',
+    $hora >= 12 and $hora <= 15  => 'Boa tarde',
+    default => 'Boa noite'
+};
+
     return $saudacao;
 }
 
