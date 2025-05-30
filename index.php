@@ -3,9 +3,10 @@
 // require 'sistema/configuracao.php';
 // include 'helpers.php';
 include './sistema/Nucleo/Mensagem.php';
+include './sistema/Nucleo/controlador.php';
 
-$msg = new Mensagem();
-echo $msg->texto = 'texto de teste';
-echo '<hr>'
+use sistema\Nucleo\controlador;
 
-var_dump($msg);
+$controlador = new controlador('admin');
+echo '<hr>';
+var_dump($controlador);
