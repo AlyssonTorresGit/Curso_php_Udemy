@@ -1,5 +1,23 @@
 <?php 
 
+/**
+ * 
+ * vilidar numero de cpf
+ */
+
+function validarCpf(string $cpf){
+    $cpf = limparNumero($cpf)
+    if (mb_strlen($cpf) != 11 or preg_match('/(\d)\1{10}/', $cpf)){
+        return false;
+
+    }else {
+        return true
+    }
+}
+function limparNumero (string $numero){
+    return preg_replace('/[^0-9]', '', $numero);
+}
+
 function dataAtual()
 {
 $diaMes = date('d');
