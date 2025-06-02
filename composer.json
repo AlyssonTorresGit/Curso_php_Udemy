@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Ceounset\\Cursophp8\\": "src/"
+            "sistema\\": "sistema/"
         }
     },
     "authors": [
