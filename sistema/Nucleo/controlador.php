@@ -2,9 +2,9 @@
 
 namespace sistema\Nucleo;
 
-class controlador
+class Controlador
 {
-    public function __construct(string $tema)
+    public function __construct(string $tema = null)
     {
         echo $tema;
     }

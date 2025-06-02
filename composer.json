@@ -5,13 +5,22 @@
     "autoload": {
         "psr-4": {
             "sistema\\": "sistema/"
-        }
+        },
+        "files":[
+            "sistema/configuracao.php"
+            
+        ]
     },
     "authors": [
         {
-            "name": "Alysson Torres"
+            "name": "Alysson Torres",
+            "email": "naderman@naderman.de",
+            "homepage": "https://www.naderman.de",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=8.0"
+    }
 }
