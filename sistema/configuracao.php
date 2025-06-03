@@ -6,3 +6,4 @@ define('SITE_NOME', 'UnSet');
 define('SITE_DESCRICAO', 'UnSet-tecnologia em Sitemas');
 define('URL_PRODUÇÃO', 'http://unset.com.br');
 define('URL_DESENVOLVIMENTO', 'http://localhost/Curso_php_Udemy/');
+define('URL_SITE', 'Curso_php_Udemy/');
