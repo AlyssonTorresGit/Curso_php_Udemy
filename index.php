@@ -1,7 +1,6 @@
 <?php
 require 'vendor/autoload.php';
 
-echo SITE_NOME;
+$document = new \Bissolli\ValidadorCpfCnpj\CPF('03318933392');
 
-
-echo sistema\Nucleo\Helpers::saudacao();
+var_dump($document->isValid());
