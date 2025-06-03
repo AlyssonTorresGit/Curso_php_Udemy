@@ -1,2 +1,18 @@
-#teste como
-options -indexes 
+#comentario
+Options -indexes 
+
+RewriteEngine On
+
+RewriteBase /Curso_php_Udemy
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+# RewriteCond %{HTTPS} !=on
+
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ index.php/$1
+
+
+
+
