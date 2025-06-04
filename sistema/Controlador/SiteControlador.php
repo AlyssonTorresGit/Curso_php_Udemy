@@ -2,8 +2,11 @@
 
 namespace Sistema\Controlador;
 
-class SiteControlador
+use sistema\Nucleo\Controlador;
+
+class SiteControlador extends Controlador
 {
+
     public function index(): void
     {
         echo 'página index';
