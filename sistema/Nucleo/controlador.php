@@ -9,6 +9,6 @@ class Controlador
     protected Template $template;
     public function __construct(string $diretorio = null)
     {
-        $this->template = new Template?($diretorio);
+        $this->template = new Template($diretorio);
     }
 }
