@@ -1,15 +1,16 @@
-#comentario
+#Bloqueia a listagem dos diretórios sem um index padrão
 Options -indexes 
-
+#Ativa o modo de reescrita
 RewriteEngine On
-
+#Define a url base
 RewriteBase /Curso_php_Udemy
-
+#Define a condição sob a qual a reescrita ocorrera
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-l
 # RewriteCond %{HTTPS} !=on
 
+#Define que será aplicado uma regra de reescrita
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^(.*)$ index.php/$1
 
