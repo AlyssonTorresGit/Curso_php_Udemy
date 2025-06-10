@@ -2,6 +2,13 @@
 
 namespace sistema\Suporte;
 
+use Twig\Lexer;
+use sistema\Nucleo\Helpers;
+
+/**
+ * Classe Template
+ */
+
 class Template
 {
     private \Twig\Environment $twig;
