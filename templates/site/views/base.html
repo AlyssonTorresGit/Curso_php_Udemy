@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="templates/assets/css/estilos.css">
+     <link rel="stylesheet" href="{{ url('templates/assets/css/estilos.css') }}">
+        <link rel="stylesheet" href="{{ url('templates/site/assets/css/site.css') }}">
 </head>
 <body>
-    {%include 'topo.html' %}
-    {%block conteudo%} {%endblock%}
-    {%include 'rodape.htnl'%}
+    {% include 'topo.html' %}
+    {% block conteudo%} {% endblock %}
+    {% include 'rodape.html' %}
     
-    <script src="templates/assets/js/site.js"></script>
+    <script src="{{ url('templates/assets/js/scripts.js') }}"></script>
+    <script src="{{ url('templates/site/assets/js/site.js') }}"></script>
 
 </body>
 </html>
