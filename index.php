@@ -8,8 +8,6 @@ require 'vendor/autoload.php';
 
 require 'rotas.php';
 
-use sistema\Nucleo\Helpers;
-
 try {
     Helpers::validarCpf('12312312312');
 } catch (Exception $e) {
