@@ -17,6 +17,7 @@ class SiteControlador extends Controlador
             'subtitulo' => 'teste de subtitulo'
         ]);
     }
+
     public function sobre(): void
     {
         echo 'página sobre';
